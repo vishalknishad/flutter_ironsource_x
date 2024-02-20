@@ -19,7 +19,7 @@ class IronSource {
       bool gdprConsent = true,
       bool ccpaConsent = true}) async {
     _listener = listener;
-    _channel.setMethodCallHandler(_listener?._handle);
+    // _channel.setMethodCallHandler(_listener?._handle);
     await _channel.invokeMethod('initialize', {
       'appKey': appKey,
       'gdprConsent': gdprConsent,
