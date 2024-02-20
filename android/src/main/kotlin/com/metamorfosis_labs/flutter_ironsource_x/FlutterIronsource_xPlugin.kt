@@ -257,7 +257,7 @@ class FlutterIronsource_xPlugin(activity: Activity, channel: MethodChannel) : Me
       val channel = MethodChannel(registrar.messenger(), IronSourceConsts.MAIN_CHANNEL)
       channel.setMethodCallHandler(FlutterIronsource_xPlugin(registrar.activity(), channel))
       val interstitialAdChannel = MethodChannel(registrar.messenger(), IronSourceConsts.INTERSTITIAL_CHANNEL)
-      registrar.platformViewRegistry().registerViewFactory(IronSourceConsts.BANNER_AD_CHANNEL, IronSourceBanner(registrar.activity(), registrar.messenger()))
+      //registrar.platformViewRegistry().registerViewFactory(IronSourceConsts.BANNER_AD_CHANNEL, IronSourceBanner(registrar.activity(), registrar.messenger()))
     }
   }
 }
