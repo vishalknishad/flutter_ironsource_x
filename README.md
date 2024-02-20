@@ -2,6 +2,10 @@
 
 Flutter plugin for showing [IronSource](https://ironsrc.com) ads (Android only)
 
+If this package was helpful to you in delivering on your project or you just wanna to support this project, a cup of coffee would be highly appreciated ;-)
+
+[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/default-green.png)](https://www.buymeacoffee.com/dnaextrim)
+
 ## Progress
 
 - [x] Interstitial
@@ -162,7 +166,65 @@ _By default gdprConsent and ccpaConsent are true_
 ## Banner
 
 ```dart
-IronSourceBannerAd(keepAlive: true, listener: BannerAdListener())
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener());
+```
+
+### **Banner Size Type:**
+
+- **BANNER**
+
+```dart
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener(), size: BannerSize.BANNER);
+```
+
+- **LARGE**
+
+```dart
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener(), size: BannerSize.LARGE);
+```
+
+- **LEADERBOARD**
+
+```dart
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener(), size: BannerSize.LEADERBOARD);
+```
+
+- **RECTANGLE**
+
+```dart
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener(), size: BannerSize.RECTANGLE);
+```
+
+- **SMART**
+
+```dart
+IronSourceBannerAd(keepAlive: true, listener: BannerAdListener(), size: BannerSize.SMART);
+```
+
+- **CUSTOM**
+
+```dart
+IronSourceBannerAd(
+  keepAlive: true,
+  listener: BannerAdListener(),
+  size: BannerSize.BANNER,
+  size: BannerSize(
+      type: BannerSizeType.BANNER,
+      width: 400,
+      height: 50,
+    ),
+);
+```
+
+### **Banner Background Color**
+
+```dart
+IronSourceBannerAd(
+  keepAlive: true,
+  listener: BannerAdListener(),
+  size: BannerSize.BANNER,
+  backgroundColor: Colors.amber, //Background Color
+);
 ```
 
 ```dart
@@ -284,7 +346,9 @@ Add the following activities inside the `<application>` tag in your AndroidManif
 ```
 
 ## Add IronSource SDK
+
 File `build.gradle`:
+
 ```gradle
 dependencies {
   implementation 'com.ironsource.sdk:mediationsdk:7.0.4.1'
@@ -327,7 +391,7 @@ Add the following inside the `<application>` tag in your AndroidManifest:
 
 please read [this](https://developer.android.com/google/play-services/setup.html) to add google play service
 
-## Mediatin
+## Mediation
 
 follow [this](https://developers.ironsrc.com/ironsource-mobile/android/mediation-networks-android/) to add mediation sdks
 
@@ -342,3 +406,9 @@ Visit [IronSource](https://developers.ironsrc.com/ironsource-mobile/android/andr
 Thanks to @karnadii & @DiMiTriFrog
 
 I will continue updating this library.
+
+## Support
+
+If this package was helpful to you in delivering on your project or you just wanna to support this project, a cup of coffee would be highly appreciated ;-)
+
+[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/default-green.png)](https://www.buymeacoffee.com/dnaextrim)

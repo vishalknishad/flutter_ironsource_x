@@ -12,7 +12,8 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>
     with IronSourceListener, WidgetsBindingObserver {
-  final String appKey = "xxxxxxxx"; // change this with your appKey
+  final String appKey =
+      "85460dcd"; // "85460dcd"; // change this with your appKey
 
   bool rewardeVideoAvailable = false,
       offerwallAvailable = false,
@@ -60,7 +61,7 @@ class _MyAppState extends State<MyApp>
 
   void showInterstitial() async {
     if (await IronSource.isInterstitialReady()) {
-      showHideBanner();
+      // showHideBanner();
       IronSource.showInterstitial();
     } else {
       print(
@@ -71,7 +72,7 @@ class _MyAppState extends State<MyApp>
 
   void showOfferwall() async {
     if (await IronSource.isOfferwallAvailable()) {
-      showHideBanner();
+      // showHideBanner();
       IronSource.showOfferwall();
     } else {
       print("Offerwall not available");
@@ -80,7 +81,7 @@ class _MyAppState extends State<MyApp>
 
   void showRewardedVideo() async {
     if (await IronSource.isRewardedVideoAvailable()) {
-      showHideBanner();
+      // showHideBanner();
       IronSource.showRewardedVideo();
     } else {
       print("RewardedVideo not available");
@@ -137,7 +138,20 @@ class _MyAppState extends State<MyApp>
                 ? Align(
                     alignment: Alignment.bottomCenter,
                     child: IronSourceBannerAd(
-                        keepAlive: true, listener: BannerAdListener()),
+                      keepAlive: true,
+                      listener: BannerAdListener(),
+                      size: BannerSize.BANNER,
+                      // size: BannerSize.LARGE,
+                      // size: BannerSize.LEADERBOARD,
+                      // size: BannerSize.RECTANGLE,
+                      // size: BannerSize.SMART,
+                      /* size: BannerSize(
+                          type: BannerSizeType.BANNER,
+                          width: 400,
+                          height: 50,
+                        ), */
+                      // backgroundColor: Colors.amber,
+                    ),
                   )
                 : SizedBox()
           ],
@@ -145,6 +159,9 @@ class _MyAppState extends State<MyApp>
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void onInterstitialAdClicked() {
