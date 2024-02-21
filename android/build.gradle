@@ -96,6 +96,10 @@ dependencies {
     // Add Facebook Network
     // implementation 'com.ironsource.adapters:facebookadapter:4.3.23'
     // implementation 'com.facebook.android:audience-network-sdk:6.2.0'
+
+    implementation 'com.ironsource.adapters:facebookadapter:4.3.45'
+    implementation 'com.facebook.android:audience-network-sdk:6.16.0'
+
     // Add Fyber Network (Adapter only)
 //    implementation 'com.ironsource.adapters:fyberadapter:4.3.10'
 //    implementation 'com.fyber.vamp:core-sdk:7.7.4'
