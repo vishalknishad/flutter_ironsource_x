@@ -69,7 +69,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.ironsource.sdk:mediationsdk:7.1.14'
+    implementation 'com.ironsource.sdk:mediationsdk:7.3.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.google.android.gms:play-services-appset:16.0.0' 
@@ -81,8 +81,12 @@ dependencies {
 //    implementation 'com.ironsource.adapters:adcolonyadapter:4.3.4'
 //    implementation 'com.adcolony:sdk:4.2.4'
     // Add AdMob Network
-    implementation 'com.google.android.gms:play-services-ads:20.5.0'
-    implementation 'com.ironsource.adapters:admobadapter:4.3.26'
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+    implementation 'com.ironsource.adapters:admobadapter:4.3.42'
+
+    implementation 'com.ironsource.adapters:facebookadapter:4.3.45'
+    implementation 'com.facebook.android:audience-network-sdk:6.16.0'
+
     // Add Amazon Network
 //    implementation 'com.ironsource.adapters:amazonadapter:4.3.3'
 //    implementation 'com.ironsource.adapters:amazonsdk:6.0.0@jar'
@@ -96,10 +100,6 @@ dependencies {
     // Add Facebook Network
     // implementation 'com.ironsource.adapters:facebookadapter:4.3.23'
     // implementation 'com.facebook.android:audience-network-sdk:6.2.0'
-
-    implementation 'com.ironsource.adapters:facebookadapter:4.3.45'
-    implementation 'com.facebook.android:audience-network-sdk:6.16.0'
-
 
     implementation 'net.pubnative:hybid.sdk:2.21.1'
     implementation 'net.pubnative:hybid.adapters.ironsource:2.21.1'
